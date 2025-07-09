@@ -1,0 +1,182 @@
+Failed: {'Họ tên': 'Nguyễn Văn A', 'Ngày sinh': '20/11/1990', 'Số điện thoại': 77777777, 'Email': 'nguyenvana@gmail.com', 'CCCD/Hộ chiếu': 1}
+Error: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff71cb96f95+76917]
+	GetHandleVerifier [0x0x7ff71cb96ff0+77008]
+	(No symbol) [0x0x7ff71c949c1c]
+	(No symbol) [0x0x7ff71c99055f]
+	(No symbol) [0x0x7ff71c9c8332]
+	(No symbol) [0x0x7ff71c9c2e53]
+	(No symbol) [0x0x7ff71c9c1f19]
+	(No symbol) [0x0x7ff71c914b05]
+	GetHandleVerifier [0x0x7ff71ce6d2cd+3051437]
+	GetHandleVerifier [0x0x7ff71ce67923+3028483]
+	GetHandleVerifier [0x0x7ff71ce858bd+3151261]
+	GetHandleVerifier [0x0x7ff71cbb185e+185662]
+	GetHandleVerifier [0x0x7ff71cbb971f+218111]
+	(No symbol) [0x0x7ff71c913b00]
+	GetHandleVerifier [0x0x7ff71cf85f38+4201496]
+	BaseThreadInitThunk [0x0x7fff63c7e8d7+23]
+	RtlUserThreadStart [0x0x7fff64f1c34c+44]
+
+
+Failed: {'Họ tên': 'Nguyễn Văn B', 'Ngày sinh': '20/11/1991', 'Số điện thoại': 77777778, 'Email': 'nguyenvanb@gmail.com', 'CCCD/Hộ chiếu': 2}
+Error: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff71cb96f95+76917]
+	GetHandleVerifier [0x0x7ff71cb96ff0+77008]
+	(No symbol) [0x0x7ff71c949c1c]
+	(No symbol) [0x0x7ff71c99055f]
+	(No symbol) [0x0x7ff71c9c8332]
+	(No symbol) [0x0x7ff71c9c2e53]
+	(No symbol) [0x0x7ff71c9c1f19]
+	(No symbol) [0x0x7ff71c914b05]
+	GetHandleVerifier [0x0x7ff71ce6d2cd+3051437]
+	GetHandleVerifier [0x0x7ff71ce67923+3028483]
+	GetHandleVerifier [0x0x7ff71ce858bd+3151261]
+	GetHandleVerifier [0x0x7ff71cbb185e+185662]
+	GetHandleVerifier [0x0x7ff71cbb971f+218111]
+	(No symbol) [0x0x7ff71c913b00]
+	GetHandleVerifier [0x0x7ff71cf85f38+4201496]
+	BaseThreadInitThunk [0x0x7fff63c7e8d7+23]
+	RtlUserThreadStart [0x0x7fff64f1c34c+44]
+
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': 77777777, 'email': 'nguyenvana@gmail.com', 'id_card': 1}
+Error: 
+
+Failed: {'full_name': 'Nguyễn Văn B', 'date_of_birth': '20/11/1991', 'phone_number': 77777778, 'email': 'nguyenvanb@gmail.com', 'id_card': 2}
+Error: 
+
+Failed: {'full_name': 'Nguyễn Văn C', 'date_of_birth': '20/11/1992', 'phone_number': 77777779, 'email': 'nguyenvanc@gmail.com', 'id_card': 3}
+Error: 
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': 77777777, 'email': 'nguyenvana@gmail.com', 'id_card': 1}
+Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c016f95+76917]
+	GetHandleVerifier [0x0x7ff78c016ff0+77008]
+	(No symbol) [0x0x7ff78bdc9dea]
+	(No symbol) [0x0x7ff78be20256]
+	(No symbol) [0x0x7ff78be2050c]
+	(No symbol) [0x0x7ff78be73887]
+	(No symbol) [0x0x7ff78be484af]
+	(No symbol) [0x0x7ff78be7065c]
+	(No symbol) [0x0x7ff78be48243]
+	(No symbol) [0x0x7ff78be11431]
+	(No symbol) [0x0x7ff78be121c3]
+	GetHandleVerifier [0x0x7ff78c2ed2cd+3051437]
+	GetHandleVerifier [0x0x7ff78c2e7923+3028483]
+	GetHandleVerifier [0x0x7ff78c3058bd+3151261]
+	GetHandleVerifier [0x0x7ff78c03185e+185662]
+	GetHandleVerifier [0x0x7ff78c03971f+218111]
+	GetHandleVerifier [0x0x7ff78c01fb14+112628]
+	GetHandleVerifier [0x0x7ff78c01fcc9+113065]
+	GetHandleVerifier [0x0x7ff78c006c98+10616]
+	BaseThreadInitThunk [0x0x7fff63c7e8d7+23]
+	RtlUserThreadStart [0x0x7fff64f1c34c+44]
+
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': 77777777, 'email': 'nguyenvana@gmail.com', 'id_card': 1}
+Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c016f95+76917]
+	GetHandleVerifier [0x0x7ff78c016ff0+77008]
+	(No symbol) [0x0x7ff78bdc9dea]
+	(No symbol) [0x0x7ff78be20256]
+	(No symbol) [0x0x7ff78be2050c]
+	(No symbol) [0x0x7ff78be73887]
+	(No symbol) [0x0x7ff78be484af]
+	(No symbol) [0x0x7ff78be7065c]
+	(No symbol) [0x0x7ff78be48243]
+	(No symbol) [0x0x7ff78be11431]
+	(No symbol) [0x0x7ff78be121c3]
+	GetHandleVerifier [0x0x7ff78c2ed2cd+3051437]
+	GetHandleVerifier [0x0x7ff78c2e7923+3028483]
+	GetHandleVerifier [0x0x7ff78c3058bd+3151261]
+	GetHandleVerifier [0x0x7ff78c03185e+185662]
+	GetHandleVerifier [0x0x7ff78c03971f+218111]
+	GetHandleVerifier [0x0x7ff78c01fb14+112628]
+	GetHandleVerifier [0x0x7ff78c01fcc9+113065]
+	GetHandleVerifier [0x0x7ff78c006c98+10616]
+	BaseThreadInitThunk [0x0x7fff63c7e8d7+23]
+	RtlUserThreadStart [0x0x7fff64f1c34c+44]
+
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': 77777777, 'email': 'nguyenvana@gmail.com', 'id_card': 1}
+Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff78c016f95+76917]
+	GetHandleVerifier [0x0x7ff78c016ff0+77008]
+	(No symbol) [0x0x7ff78bdc9dea]
+	(No symbol) [0x0x7ff78be20256]
+	(No symbol) [0x0x7ff78be2050c]
+	(No symbol) [0x0x7ff78be73887]
+	(No symbol) [0x0x7ff78be484af]
+	(No symbol) [0x0x7ff78be7065c]
+	(No symbol) [0x0x7ff78be48243]
+	(No symbol) [0x0x7ff78be11431]
+	(No symbol) [0x0x7ff78be121c3]
+	GetHandleVerifier [0x0x7ff78c2ed2cd+3051437]
+	GetHandleVerifier [0x0x7ff78c2e7923+3028483]
+	GetHandleVerifier [0x0x7ff78c3058bd+3151261]
+	GetHandleVerifier [0x0x7ff78c03185e+185662]
+	GetHandleVerifier [0x0x7ff78c03971f+218111]
+	GetHandleVerifier [0x0x7ff78c01fb14+112628]
+	GetHandleVerifier [0x0x7ff78c01fcc9+113065]
+	GetHandleVerifier [0x0x7ff78c006c98+10616]
+	BaseThreadInitThunk [0x0x7fff63c7e8d7+23]
+	RtlUserThreadStart [0x0x7fff64f1c34c+44]
+
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': 77777777, 'email': 'nguyenvana@gmail.com', 'id_card': 1}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn B', 'date_of_birth': '20/11/1991', 'phone_number': 77777778, 'email': 'nguyenvanb@gmail.com', 'id_card': 2}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn C', 'date_of_birth': '20/11/1992', 'phone_number': 77777779, 'email': 'nguyenvanc@gmail.com', 'id_card': 3}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn D', 'date_of_birth': '20/11/1993', 'phone_number': 77777780, 'email': 'nguyenvand@gmail.com', 'id_card': 4}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn E', 'date_of_birth': '20/11/1994', 'phone_number': 77777781, 'email': 'nguyenvane@gmail.com', 'id_card': 5}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn F', 'date_of_birth': '20/11/1995', 'phone_number': 77777782, 'email': 'nguyenvanf@gmail.com', 'id_card': 6}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn G', 'date_of_birth': '20/11/1996', 'phone_number': 77777783, 'email': 'nguyenvang@gmail.com', 'id_card': 7}
+Error: Submit button not found.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+Failed: {'full_name': 'Nguyễn Văn C', 'date_of_birth': '20/11/1992', 'phone_number': '077777779', 'email': 'nguyenvanc@gmail.com', 'id_card': 482030001123}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn B', 'date_of_birth': '20/11/1991', 'phone_number': '077777778', 'email': 'nguyenvanb@gmail.com', 'id_card': 482030001122}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn A', 'date_of_birth': '20/11/1990', 'phone_number': '077777777', 'email': 'nguyenvana@gmail.com', 'id_card': 482030001121}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn D', 'date_of_birth': '20/11/1993', 'phone_number': '077777780', 'email': 'nguyenvand@gmail.com', 'id_card': 482030001124}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn G', 'date_of_birth': '20/11/1996', 'phone_number': '077777783', 'email': 'nguyenvang@gmail.com', 'id_card': 482030001127}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn I', 'date_of_birth': '20/11/1998', 'phone_number': '077777785', 'email': 'nguyenvani@gmail.com', 'id_card': 482030001129}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn F', 'date_of_birth': '20/11/1995', 'phone_number': '077777782', 'email': 'nguyenvanf@gmail.com', 'id_card': 482030001126}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn E', 'date_of_birth': '20/11/1994', 'phone_number': '077777781', 'email': 'nguyenvane@gmail.com', 'id_card': 482030001125}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn K', 'date_of_birth': '20/11/1999', 'phone_number': '077777786', 'email': 'nguyenvank@gmail.com', 'id_card': 482030001130}
+Error: name 'df' is not defined
+
+Failed: {'full_name': 'Nguyễn Văn H', 'date_of_birth': '20/11/1997', 'phone_number': '077777784', 'email': 'nguyenvanh@gmail.com', 'id_card': 482030001128}
+Error: name 'df' is not defined
+
