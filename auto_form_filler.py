@@ -50,13 +50,14 @@ def get_chrome_options(headless=True):
 
 def format_date(date_str):
     """Tách ngày tháng năm từ nhiều định dạng ngày hoặc trả về nguyên gốc"""
-    from datetime import datetime
-
     try:
         if isinstance(date_str, pd.Timestamp):
             date_str = date_str.strftime("%d/%m/%Y")
+        elif isinstance(date_str, datetime):
+            date_str = date_str.strftime("%d/%m/%Y")
         elif isinstance(date_str, str):
-            for fmt in ["%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%Y/%m/%d"]:
+            date_str = date_str.strip()
+            for fmt in ["%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%Y/%m/%d", "%d.%m.%Y"]:
                 try:
                     parsed_date = datetime.strptime(date_str, fmt)
                     return {
@@ -71,6 +72,18 @@ def format_date(date_str):
     except Exception as e:
         print(f"Lỗi khi tách ngày tháng: {e}")
         return {"day": "", "month": "", "year": "", "full": date_str}
+
+
+def normalize_phone_number(value):
+    """Chuẩn hóa số điện thoại"""
+    if not value or not isinstance(value, str):
+        return value
+    value = value.strip()
+    if value.isdigit() and len(value) in [8, 9, 10]:
+        if not value.startswith("0"):
+            value = "0" + value
+        return value.zfill(9)  # Đảm bảo độ dài tối thiểu 9 chữ số
+    return value
 
 
 def get_sales_dates(driver, form_mapping):
@@ -391,7 +404,19 @@ def find_element_by_heuristics(driver, form_col, form_mapping):
     return None
 
 
-# Dán và thay thế toàn bộ hàm fill_and_submit_process trong file của bạn
+def is_date_column(value):
+    """Kiểm tra xem giá trị có phải là ngày tháng không"""
+    if not value or not isinstance(value, str):
+        return False
+    for fmt in ["%d/%m/%Y", "%Y-%m-%d", "%d-%m-%Y", "%Y/%m/%d"]:
+        try:
+            datetime.strptime(value.strip(), fmt)
+            return True
+        except ValueError:
+            continue
+    return False
+
+
 # Dán và thay thế toàn bộ hàm fill_and_submit_process trong file của bạn
 def fill_and_submit_process(task_data):
     (
@@ -429,25 +454,28 @@ def fill_and_submit_process(task_data):
         mapped_data = {}
         for excel_col, form_field_key in column_mapping.items():
             if excel_col in data:
-                if form_field_key == "date_of_birth":
-                    date_parts = format_date(data.get(excel_col, ""))
+                value = data.get(excel_col, "").strip()
+                if form_field_key == "phone_number":
+                    mapped_data[form_field_key] = normalize_phone_number(value)
+                elif is_date_column(value):
+                    date_parts = format_date(value)
                     if "day" in form_mapping:
                         mapped_data["day"] = date_parts["day"].lstrip("0")
                     if "month" in form_mapping:
                         mapped_data["month"] = date_parts["month"].lstrip("0")
                     if "year" in form_mapping:
                         mapped_data["year"] = date_parts["year"]
-                    if "date_of_birth" in form_mapping:
+                    if "date_of_birth" in form_mapping and not all(
+                        k in form_mapping for k in ["day", "month", "year"]
+                    ):
                         mapped_data["date_of_birth"] = date_parts["full"]
                 else:
-                    mapped_data[form_field_key] = str(data.get(excel_col, "")).strip()
+                    mapped_data[form_field_key] = value
 
         mapped_data["sales_date"] = data.get(
             "sales_date", random.choice(valid_sales_dates) if valid_sales_dates else ""
         )
         mapped_data["session"] = data.get("session", "")
-        # LƯU Ý: Sửa lại giá trị session nếu cần thiết để khớp với thuộc tính 'value' trong HTML
-        # Ví dụ: nếu text là "13:30 - 15:30" thì value là "12:00 - 14:00"
         if mapped_data["session"] == "13:30 - 15:30":
             mapped_data["session"] = "12:00 - 14:00"
 
@@ -473,7 +501,6 @@ def fill_and_submit_process(task_data):
                     )
                     time.sleep(0.2)
 
-                    # === GIẢI PHÁP CUỐI CÙNG: SỬ DỤNG JAVASCRIPT ===
                     if element.tag_name == "select":
                         print(
                             f"[{process_id}] DEBUG: Đang xử lý trường SELECT: '{form_col}'"
@@ -500,15 +527,18 @@ def fill_and_submit_process(task_data):
                                 f"[{process_id}] LỖI khi đặt giá trị dropdown bằng JS cho '{form_col}': {e}"
                             )
                             return False, mapped_data.get("full_name", "N/A")
-                    # === KẾT THÚC PHẦN SỬA ĐỔI ===
-                    else:  # Xử lý các trường input như cũ
+                    else:
+                        # Ép buộc điền giá trị bằng JavaScript để tránh lỗi định dạng
                         driver.execute_script(
                             f"""
                             var elem = arguments[0];
                             elem.value = '{value}';
-                            elem.dispatchEvent(new Event('input', {{ bubbles: true }}));
-                            elem.dispatchEvent(new Event('change', {{ bubbles: true }}));
-                            elem.dispatchEvent(new Event('blur', {{ bubbles: true }}));
+                            var inputEvent = new Event('input', {{ bubbles: true }});
+                            var changeEvent = new Event('change', {{ bubbles: true }});
+                            var blurEvent = new Event('blur', {{ bubbles: true }});
+                            elem.dispatchEvent(inputEvent);
+                            elem.dispatchEvent(changeEvent);
+                            elem.dispatchEvent(blurEvent);
                             """,
                             element,
                         )
@@ -531,7 +561,6 @@ def fill_and_submit_process(task_data):
                     )
                 return False, mapped_data.get("full_name", "N/A")
 
-        # Log dữ liệu cuối cùng để kiểm tra
         final_form_data = driver.execute_script(
             "return Object.fromEntries(new FormData(document.querySelector('form')))"
         )
@@ -551,7 +580,6 @@ def fill_and_submit_process(task_data):
             print(f"[{process_id}] Không tìm thấy nút submit")
             return False, mapped_data.get("full_name", "N/A")
 
-        # Kiểm tra kết quả
         try:
             success_element = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located(
@@ -698,14 +726,24 @@ class Application(tk.Tk):
             self.log_message(
                 f"Đã đọc {len(df)} dòng dữ liệu từ Excel với các cột: {', '.join(excel_columns)}"
             )
-            # Lấy ba hàng đầu tiên làm dữ liệu mẫu
+            # Lấy ba hàng đầu tiên làm dữ liệu mẫu và chuyển đổi datetime
             excel_data_sample = df.head(3).to_dict(orient="records")
+            for record in excel_data_sample:
+                for key, value in record.items():
+                    if isinstance(value, (pd.Timestamp, datetime)):
+                        record[key] = value.strftime("%d/%m/%Y")
             # Chuẩn hóa dữ liệu
             for col in excel_columns:
                 df[col] = df[col].astype(str).str.strip()
                 if any(
                     keyword in col.lower()
-                    for keyword in ["phone", "số điện thoại", "sđt"]
+                    for keyword in [
+                        "phone",
+                        "số điện thoại",
+                        "sđt",
+                        "phone_number",
+                        "phone_numbers",
+                    ]
                 ):
                     df[col] = df[col].apply(
                         lambda x: (
@@ -791,7 +829,7 @@ class Application(tk.Tk):
                                 self.active_drivers_map,
                                 self.form_mapping,
                                 self.column_mapping,
-                                valid_sales_dates,  # Thêm valid_sales_dates vào task_data
+                                valid_sales_dates,
                             )
                         )
                 num_workers = min(os.cpu_count() if os.cpu_count() else 4, len(tasks))

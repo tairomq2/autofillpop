@@ -640,3 +640,36 @@ Submission verification failed for Nguyễn Văn Duc with data {'Name': 'Nguyễ
 Submission verification failed for Nguyễn Văn Bao with data {'Name': 'Nguyễn Văn Bao', 'day': '20', 'email': 'nguyenvana@gmail.com', 'idCard': '048203001121', 'month': '11', 'phone': '077777777', 'salesDates': '', 'sessions': '', 'year': '1990'}
 Submission verification failed for Nguyễn Văn Duc with data {'Name': 'Nguyễn Văn Duc', 'day': '20', 'email': 'nguyenvanb@gmail.com', 'idCard': '048203001122', 'month': '11', 'phone': '077777778', 'salesDates': '', 'sessions': '', 'year': '1991'}
 Submission verification failed for Nguyễn Văn Duc with data {'Name': 'Nguyễn Văn Duc', 'day': '20', 'email': 'nguyenvanb@gmail.com', 'idCard': '048203001122', 'month': '11', 'phone': '077777778', 'salesDates': '', 'sessions': '', 'year': '1991'}
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Duc
+Field not found: 'date_of_birth' for Nguyễn Văn Duc
+Field not found: 'date_of_birth' for Nguyễn Văn Duc
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '11/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '09/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '10/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '10/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '09/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '11/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '10/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '11/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '09/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '10/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '11/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Submission verification failed for Nguyễn Văn Duc with data {'day': '20', 'email': 'nguyenvanb@gmail.com', 'fullName': 'Nguyễn Văn Duc', 'idCard': '048203001122', 'month': '11', 'phoneNumber': '', 'salesDate': '09/07/2025', 'session': '10:00 - 12:00', 'year': '1991'}
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
+Field not found: 'date_of_birth' for Nguyễn Văn Bao
